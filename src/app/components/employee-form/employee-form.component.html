@@ -1,0 +1,44 @@
+<div class="card m-2 standard-shadow bg-light">
+    <form class="width-five p-5" [formGroup]="employeeInfo">
+        <label>Employee Name</label>
+        <input class='form-control' placeholder="Enter your Name" formControlName="employeeName" required>
+        <div class="row">
+            <div class="col">
+                <label>Email</label>
+                <input type="email" class='form-control' placeholder="name@yahoo.com" formControlName="employeeEmail" required>
+            </div>
+            <div class="col">
+                <label>Phone</label>
+                <input type="number" class='form-control' placeholder="9874563210" formControlName="employeePhone" required>
+            </div>
+        </div>
+        <label>Date of Birth</label>
+        <input type="date" class='form-control' formControlName="employeeDOB" required>
+        <div formGroupName="employeeAddress">
+            <div class="row">
+                <div class="col">
+                    <label>Address</label>
+                    <input class='form-control' placeholder="Your Address" formControlName="employeeStreet" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-sm-6 col-md-4">
+                    <label>City</label>
+                    <input class='form-control' placeholder="City" formControlName="employeeCity" required>
+                </div>
+                <div class="col col-sm-6 col-md-4">
+                    <label>State</label>
+                    <input class='form-control' placeholder="State" formControlName="employeeState" required>
+                </div>
+                <div class="col col-sm-6 col-md-4">
+                    <label>Country</label>
+                    <input class='form-control' placeholder="Country" formControlName="employeeCountry" required>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="d-flex justify-content-center">
+            <div class="btn btn-success" (click)="submitHandler()">Submit</div>
+        </div>
+    </form>
+</div>

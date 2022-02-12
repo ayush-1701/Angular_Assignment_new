@@ -1,0 +1,11 @@
+.avatar{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(151, 151, 151);
+    border-radius: 50%;
+}
+.card:hover{
+    z-index: 100;
+    transform: scale(1.1);
+    transition: transform 0.05s ease-out;
+}
